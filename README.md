@@ -9,6 +9,7 @@ The minimum viable product (MVP) for the Ako Shop ecommerce/App would typically 
 3. Gives the option of continue shopping for both register and non register users at cart stage. The quantity of items can be added or removed by using the down and up arrows.
 4. Provide section for shipping address for registered users and non registered user, but for digital products the shipping address is hiden.
 
+
 ## AKO SHOP ECOMMERCE WEBSITE/APP
 
 <img width="960" alt="Screenshot (53)" src="https://github.com/Akoatem/MVP/assets/71437843/612638db-e985-4a2c-b1e8-594aae2181cd">
