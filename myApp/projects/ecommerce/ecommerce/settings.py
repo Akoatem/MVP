@@ -23,6 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure---&aeo5zt#w1&611m8q@kn(9!0ixl+)r#tnby=pb5lc*m__gt!'
 
+# Other settings...
+
+#AUTH_USER_MODEL = 'user_customization.User'
+
+# Other settings...
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -39,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
+    
+    'accounts',
     
 ]
 
@@ -78,8 +87,12 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'akoshop',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost'
+        
     }
 }
 

@@ -19,9 +19,10 @@ from django.urls import path, include
 
 from django.conf.urls.static import static
 from django.conf import settings
-
+# urls mapping for all the apps
 urlpatterns = [
     path('', include('store.urls')),
+    path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
 ]
 

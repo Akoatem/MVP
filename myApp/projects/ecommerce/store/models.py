@@ -1,24 +1,28 @@
 from django.db import models
 from django.contrib.auth.models import User
+#from django.conf import settings
+
 
 # Create your models here.
 # A OneToOne relationship to the User model
 class Customer(models.Model):
-	user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
-	name = models.CharField(max_length=200, null=True)
-	email = models.CharField(max_length=200)
+    user = models.OneToOneField(User, null=True, blank=True, related_name='customer', on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=200)
 
-	def __str__(self):
-		return self.name
-    
+    def __str__(self):
+        return self.name
+   
 class Product(models.Model):
     name = models.CharField(max_length=200, null=True)
+    description = models.TextField(blank=True, null=True)
     price = models.DecimalField(max_digits=7, decimal_places=2)
     digital = models.BooleanField(default=False, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True) 
     
     def __str__(self):
         return self.name
+
     # To prevent error when an image is deleted
     @property
     def imageURL(self):
