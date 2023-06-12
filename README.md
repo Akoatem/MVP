@@ -9,6 +9,25 @@ The minimum viable product (MVP) for the Ako Shop ecommerce/App would typically 
 3. Gives the option of continue shopping for both register and non register users at cart stage. The quantity of items can be added or removed by using the down and up arrows.
 4. Provide section for shipping address for registered users and non registered user, but for digital products the shipping address is hiden.
 
+## STEPS FOR THE DEVELOPMENT IN DJANGO FRAMEWORK
+### Part 1 | Configure App
+1. install the virtual enviroment and Django installed and created our first project using  django-admin startproject “ecommerce”.
+2. Create the first app files with python manage.py startapp “store". 
+3. Add app to settings.py
+
+### Part 2 | Templates
+1. create a folder to store our templates. Our html files will be stored within our app inside a folder called "templates".
+2. inside the templates folder create another folder with the same name as the app. In this case if you called your app "store", like I did, then that should be the name of the folder.
+3. Main.html → Template which all will inherit from
+4. Store.html → Home page/store front with all products
+5. Cart.html → Users shopping cart
+6.  Checkout.html → Checkout page
+
+### Part 3 | Views & URLs
+1. Inside your apps views.py file created 3 views, store, cart, checkout. I created some "url paths" to call these views.
+2. I Created a file called "urls.py" inside your app. Inside the app import “path” along with the “views” and create a urlpatterns list. Inside "urlpatterns " create 3 paths, one for each view and give them a name.
+3. Base URLs Configuration. import "inlcude" just after "path" and add a path that points to the new urls.py we created inside "store". from django.contrib import admin, from django.urls import path, include
+
 
 ## AKO SHOP ECOMMERCE WEBSITE/APP
 
