@@ -8,6 +8,10 @@
         {
             "src": "/(.*)",
             "dest": "ecommerce/wsgi.py"
+        },
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
         }
     ]
 }
